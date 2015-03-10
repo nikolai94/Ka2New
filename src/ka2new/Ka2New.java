@@ -22,7 +22,7 @@ public class Ka2New {
      */
     public static void main(String[] args) {
         
-      //  Persistence.generateSchema("Ka2NewPU", null);
+      Persistence.generateSchema("Ka2NewPU", null);
     
     
     }
