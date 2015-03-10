@@ -14,6 +14,8 @@ import static org.junit.Assert.*;
 public class Ka2UnitTest {
     
     public Ka2UnitTest() {
+        //sql connection
+        
     }
     
     @BeforeClass
@@ -35,6 +37,9 @@ public class Ka2UnitTest {
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
-    // @Test
-    // public void hello() {}
+    @Test
+    public void testIt()throws Exception {
+        //connection connect = getConnection();
+        //connection.setAutoCommit(false);//Begynd transaktion
+    }
 }
