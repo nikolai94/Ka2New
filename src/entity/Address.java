@@ -69,7 +69,10 @@ public class Address implements Serializable {
     public void setAdditionalInfo(String AdditionalInfo) {
         this.AdditionalInfo = AdditionalInfo;
     }
-
+    
+    public Cityinfo getCityinfo (){
+        return cityinfo;
+    }
     
     
     

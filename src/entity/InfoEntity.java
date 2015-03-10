@@ -26,9 +26,17 @@ public class InfoEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String email;
-   
+    
+    @OneToMany(mappedBy = "infoEntity")
+    List <Phone> Phones = new  ArrayList();
+    
     @ManyToOne
     private Address address; 
+    
+    public Address getAddress()
+    {
+        return address;
+    }
     
     public InfoEntity() {
     }
@@ -37,8 +45,7 @@ public class InfoEntity implements Serializable {
         this.email = email;
     }
     
-    @OneToMany(mappedBy = "infoEntity")
-    List <Phone> Phones = new  ArrayList();
+   
     
     public String getEmail() {
         return email;
@@ -50,6 +57,10 @@ public class InfoEntity implements Serializable {
     public void addPhone(Phone p)
     {
         Phones.add(p);
+    }
+    
+    public List<Phone> getPhones(){
+        return Phones;
     }
 
     public void setEmail(String email) {

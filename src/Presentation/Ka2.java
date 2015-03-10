@@ -16,8 +16,8 @@ public class Ka2 {
     public static void main(String[] args) {
         MyFacade f = new MyFacade();
         
-        Person p = new Person("test1", "test2");
-        InfoEntity info = new InfoEntity("mailTest");
+        Person p = new Person("a@b.dk","test1", "test2");
+        //InfoEntity info = new InfoEntity("mailTest");
         Phone phone = new Phone(11, "testNubmer");
         
         Address add = new Address("test1", "tesst1");
@@ -25,8 +25,22 @@ public class Ka2 {
         
         Hobby hobby = new Hobby("Fodbold","Arsenal er bedst");
         
-        f.addPerson(info, p, phone, add, cityInfo, hobby);
+        f.addPerson(p, phone, add, cityInfo, hobby);
         
-        System.out.println("Person"+  f.getPerson(3));
+         p = new Person("ats@b.dk","tsest1", "tesst2");
+        //InfoEntity info = new InfoEntity("mailTest");
+         phone = new Phone(11, "testNsubmer");
+        
+         add = new Address("tesst1", "tesssst1");
+         cityInfo = new Cityinfo("1111", "testby");
+        
+         hobby = new Hobby("Fodbold","Arsenal er de bedste");
+        
+        f.addPerson(p, phone, add, cityInfo, hobby);
+      //  f.getPerson(1);
+        
+        //System.out.println(f.getPersons());
+        //System.out.println("Person"+  p2);
+        //System.out.println(p2.getAddress().toString());
     }
 }
