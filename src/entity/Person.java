@@ -37,7 +37,14 @@ public class Person extends InfoEntity implements Serializable {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-
+    
+    public void addHobby(Hobby hob)
+    {
+        hobbys.add(hob);
+    }
+    
+    
+    
     public String getFirstName() {
         return firstName;
     }

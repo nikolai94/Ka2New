@@ -35,6 +35,10 @@ public class Phone implements Serializable {
     {
         
     }
+    public void AddPhoneToInfoEntity(InfoEntity infoEnti)
+    {
+       infoEntity = infoEnti;
+    }
 
     public Integer getNumber() {
         return number;

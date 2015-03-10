@@ -6,10 +6,12 @@
 package entity;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -23,11 +25,19 @@ public class Cityinfo implements Serializable {
     private Integer id;
     private String zipcode;
     private String city;
+    
+    @OneToMany(mappedBy = "cityinfo")
+    private List<Address> address;
 
     public Cityinfo(String zipcode, String city) {
         this.zipcode = zipcode;
         this.city = city;
     }
+    
+    public void addAddress (Address addNew)
+    {
+        address.add(addNew);
+    }        
     
     public Cityinfo()
     {

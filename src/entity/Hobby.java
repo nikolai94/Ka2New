@@ -39,6 +39,10 @@ public class Hobby implements Serializable {
         this.description = description;
     }
     
+    public void addPerson(Person p)
+    {
+        listPerson.add(p);
+    }
 
     public String getName() {
         return name;
