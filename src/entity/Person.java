@@ -8,6 +8,7 @@ package entity;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -26,7 +27,7 @@ public class Person extends InfoEntity implements Serializable {
   
 
     
-    @ManyToMany(mappedBy = "listPerson")
+    @ManyToMany(mappedBy = "listPerson",fetch=FetchType.EAGER)
     private List<Hobby> hobbys;
    
     
