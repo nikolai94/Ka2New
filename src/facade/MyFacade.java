@@ -101,8 +101,8 @@ public class MyFacade {
         List<Person> list = em.createQuery(q).getResultList();
        
 
-            String json = new Gson().toJson(list);
-            System.out.println(json);
+           // String json = new Gson().toJson(list);
+            System.out.println(list);
       
        
 
